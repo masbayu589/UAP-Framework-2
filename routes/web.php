@@ -13,19 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/pendaftaran', function () {
-    return view('pendaftaran' ,[
-        "name" => "Bayu Aditya",
-        "email" => "masbayu589@gmail.com",
-        
-    ] );
-});
-
-Route::get('/', function () {
-    return view('ujian',
-    ["title" => "ujian"]);
+Route::prefix('mahasiswa')->group(function () {
+    // Route untuk halaman admin/users tanpa menggunakan controller
+    Route::get('/pendaftaran', function () {
+        return "Ini adalah halaman pendaftaran"; // Sesuaikan dengan respons atau tampilan yang diinginkan
+    })->name('home');
+    Route::get('/ujian', function () {
+        return "Ini adalah halaman ujian"; // Sesuaikan dengan respons atau tampilan yang diinginkan
+    })->name('home');
+    Route::get('/nilai', function () {
+        return "Ini adalah halaman nilai"; // Sesuaikan dengan respons atau tampilan yang diinginkan
+    })->name('home');
+    // Tambahkan rute lainnya yang mungkin Anda butuhkan di sini
 });
