@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="jumbotron text-center">
-        <img src="{{asset('oke/img/bgst.jpg')}}" alt="Hekel" width="200" class="rounded-circle img-thumbnail">
+        <img src="{{asset('oke/img/bgsd.jpeg')}}" alt="Hekel" width="200" class="rounded-circle img-thumbnail">
         <h1 class="mt-1 display-4">Bayu Aditya Saputra</h1>
         <p class="lead">Student | Fullstack Developer</p>
         

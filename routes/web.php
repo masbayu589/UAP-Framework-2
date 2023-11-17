@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KrsController;
+use App\Http\Controllers\DatamahasiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +28,14 @@ Route::prefix('/mahasiswa')->group(function () {
 
     Route::get('/nilai', function () {
         return 'Halaman nilai untuk /nilai';
-    });
+    });
 });
 
 Route::get('/', function () {
     return view('mahasiswa');
 });
+
+Route::get('/viewkrs', [KrsController::class, 'index']);
+
+Route::get('/datamahasiswa', [DatamahasiswaController::class, 'index'])->name('mahasiswa.index');
+Route::get('/datamahasiswa/{nim}/krs', [DatamahasiswaController::class, 'showKrs'])->name('mahasiswa.krs');
