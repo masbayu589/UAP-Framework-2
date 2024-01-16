@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KrsController;
 use App\Http\Controllers\DatamahasiswaController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,9 +39,7 @@ Route::prefix('/mahasiswa')->group(function () {
     });
 });
 
-Route::get('/', function () {
-    return view('mahasiswa');
-});
+Route::get('/', [ProfileController::class, 'index']);
 
 Route::get('/viewkrs', [KrsController::class, 'index']);
 
