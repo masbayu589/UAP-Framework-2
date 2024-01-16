@@ -15,7 +15,14 @@ use App\Http\Controllers\DatamahasiswaController;
 |
 */
 
-
+Route::prefix('dosen')->group(function () {     
+    Route::get('/profile', function () {
+        return view('v_profile'); 
+    })->name('profile');
+    Route::get('/data_pengampu', function () {
+        return view('v_ampu'); 
+    })->name('pengampu');
+});
 
 Route::prefix('/mahasiswa')->group(function () {
     Route::get('/pendaftaran', function () {

@@ -10,7 +10,7 @@ class Datamahasiswa
     private static $data_posts = [
         [
             "NIM" => "21.31.0012",
-            "Nama" => "Irfan Adi Prasetyo",
+            "Nama" => "Eka Yuniar",
             "Jurusan" => "D3-Sistem Informasi",
         ],
         [
